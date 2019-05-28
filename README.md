@@ -1,6 +1,9 @@
-## Symfony Overblog Graphqlbundle integration
+## Symfony Sandbox dockerized
 
-docs: https://github.com/overblog/GraphQLBundle
+First step:
+```
+./composer install 
+```
 
 # Quick start
 
@@ -26,9 +29,3 @@ http://localhost/app_dev.php/graphiql
 # graphql endpoint
 http://localhost/app_dev.php/graphql
 ```
-
-## tasks
-Implement connections: Product - Manufacturer (many-to-one), Product - Categories (many-to-many)
-Implement mutations: delete product, update product (patrial), insert product, CRUD relations through owning side
-
-
