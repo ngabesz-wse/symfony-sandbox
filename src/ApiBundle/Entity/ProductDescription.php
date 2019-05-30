@@ -125,4 +125,12 @@ class ProductDescription implements NodeInterface
     {
         $this->description = $description;
     }
+
+    /**
+     * @GraphQL\Field(type="string")
+     */
+    public function locale(): string
+    {
+        return $this->language->getLocale();
+    }
 }

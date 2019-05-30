@@ -144,12 +144,19 @@ class Product implements NodeInterface
     /**
      * @return ProductDescription[]
      * @GraphQL\Field(type="[ApiBundle\Entity\ProductDescription]")
-     * @GraphQL\Argument(name="language", type="String")
-     * @GraphQL\Argument(name="name", type="String")
+     * @GraphQL\Argument(name="locale", type="String")
      */
-    public function getDescriptions($language = '', $name = '')
+    public function getDescriptions($locale = false)
     {
-        return $this->descriptions;
+        if (!$locale){
+            return $this->descriptions;
+        }
+        foreach ($this->descriptions as $desc){
+            if ($desc->locale() == $locale){
+                return array($desc);
+            }
+        }
+        return array();
     }
 
     /**
