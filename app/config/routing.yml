@@ -1,8 +1,7 @@
 api:
+    resource: '@YnloGraphQLBundle/Resources/config/routing/root.yml'
+    prefix:   /api
+
+app_api:
     resource: "@ApiBundle/Resources/config/routing.yml"
     prefix:   /
-
-overblog_graphql_single_endpoint:
-    resource: "@OverblogGraphQLBundle/Resources/config/routing/single.yaml"
-    prefix: /api
-

@@ -10,8 +10,9 @@ _errors:
     resource: "@TwigBundle/Resources/config/routing/errors.xml"
     prefix:   /_error
 
-overblog_graphiql_endpoint:
-    resource: "@OverblogGraphiQLBundle/Resources/config/routing.xml"
+api_explore:
+    resource: '@YnloGraphQLBundle/Resources/config/routing/explorer.yml'
+    prefix:   /explorer
 
 _main:
     resource: routing.yml
